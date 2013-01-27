@@ -65,15 +65,15 @@ var jsfv = new function () {
         },
 {% block removeErrors_method %}
         removeErrors: function (field) {
-            $(field).siblings('ul.error_list').remove();
+            $(field).prev('ul.form_errors').remove();
         },
 {% endblock %}
 {% block addError_method %}
         addError: function (field, errorMessage) {
             // Add errors block
             field = $(field);
-            if (field.siblings('ul.error_list').length == 0)  {
-                field.before('<ul class="error_list"></ul>');
+            if (field.prev('ul.form_errors').length == 0)  {
+                field.before('<ul class="form_errors"></ul>');
             }
 
             // Add error

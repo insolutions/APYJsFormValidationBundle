@@ -54,5 +54,5 @@ twig:
     strict_variables: %kernel.debug%
 
 apy_js_form_validation:
-    check_modes: [submit, blur]
+    check_mode: both
     javascript_framework: jquery
